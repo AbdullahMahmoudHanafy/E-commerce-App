@@ -75,3 +75,51 @@ input {
     pointer-events: none; /* allows clicks to go through to input */
 }
 
+@media (max-width: 1200px) {
+    .pagesButtonsDev {
+        gap: 0px;
+    }
+    .titleDev {
+        font-size: 20px;
+    }
+    button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+  .mainDev {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 0px;
+    padding: 10px 30px 10px 30px;
+    height: auto;
+  }
+
+  .titleDev {
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .pagesButtonsDev {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+  }
+
+  button {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .actionsDev {
+    grid-column: span 2;
+    width: 100%;
+  }
+}
