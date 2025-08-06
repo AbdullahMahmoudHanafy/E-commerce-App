@@ -3,18 +3,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 800px;
+    height: 750px;
     width: 100%;
-}
-
-.surrondingDiv {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
 }
 
 .formContainer {
@@ -49,7 +39,6 @@
     gap: 20px;
     height: auto;
     margin-top: 18px;
-
 }
 
 .submitButton {
@@ -89,4 +78,24 @@
 .forgetPasswordButton:hover {
     cursor: pointer;
     border: 1px solid #B32A2A;
+}
+
+@media (max-width: 1200px) {
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 800px;
+    }
+
+    .sideImage {
+        height: 50%;
+        width: 100%;
+    }
+
+    .formContainer {
+        width: 90%;
+        height: auto;
+        margin-right: 0;
+    }
 }
