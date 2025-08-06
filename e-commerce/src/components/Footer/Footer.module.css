@@ -10,6 +10,7 @@
 }
 
 .contentDiv{
+    background-color: transparent;
     padding: 20px;
     text-align: left;
     display: flex;
@@ -20,19 +21,24 @@
 h3 {
     padding-bottom: 10px;
     height: 40px;
+    background-color: black;
 }
 
 h4 {
     height: auto;
     padding-bottom: 10px;
+    background-color: black;
 }
 
 p {
     height: auto;
     padding: 6px 0px 6px 0px;
+    background-color: black;
 }
 
+
 .div {
+    background-color: black;
     width: auto;
     height: auto;
     max-width: 250px;
@@ -44,6 +50,7 @@ p {
 }
 
 .inputContainer {
+    background-color: black;
     height: auto;
     display: flex;
     position: relative;
@@ -66,6 +73,7 @@ p {
     right: 10px;
     color: gray;
     pointer-events: none; /* allows clicks to go through to input */
+    background-color: black;
 }
 
 #smallParagraph {
@@ -77,6 +85,7 @@ p {
 }
 
 .downloadingMethodsContainer {
+    background-color: black;
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 50% 50%;
@@ -96,6 +105,7 @@ p {
 .methodImg {
     width: 40px;
     margin-right: 2px;
+    background-color: black;
 }
 
 .downloadButton {
