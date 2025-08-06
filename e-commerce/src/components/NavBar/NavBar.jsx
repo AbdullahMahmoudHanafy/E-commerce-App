@@ -1,6 +1,6 @@
 import styles from "./NavBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faHeart, faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 
@@ -41,6 +41,7 @@ function NavBar() {
                     </div>
                     <FontAwesomeIcon icon={faHeart} className={styles.icon}/>
                     <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
+                    <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/sign-in')}/>
                 </div>
                 
             </div>
