@@ -81,6 +81,13 @@ input {
     pointer-events: none; /* allows clicks to go through to input */
 }
 
+#hr {
+    border: none;
+    height: 1px;
+    background-color: grey;
+    width: 100%;
+}
+
 @media (max-width: 1200px) {
     .pagesButtonsDiv {
         gap: 0px;
