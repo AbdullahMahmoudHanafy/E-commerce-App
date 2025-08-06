@@ -1,0 +1,92 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 800px;
+    width: 100%;
+}
+
+.surrondingDiv {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.formContainer {
+    height: 390px;
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 10%;
+}
+
+.sideImage {
+    width: 50%;
+    height: 600px;
+}
+
+.input {
+    border: none;
+    background-color: white;
+    text-align: start;
+    padding: 0px;
+    margin: 10px 0px 5px 0px;
+    border-bottom: 2px solid black;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: auto;
+    margin-top: 18px;
+
+}
+
+.submitButton {
+    height: 50px;
+    width: 120px;
+    background-color: #DB4444;
+    color: white;
+    border-radius: 3px;
+}
+
+.forgetPasswordButton {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    color: red;
+}
+
+.header {
+    font-size: 40px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.paragraph {
+    background-color: white;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.submitButton:hover {
+    background-color: #B32A2A;
+    cursor: pointer;
+    border: none;
+}
+
+.forgetPasswordButton:hover {
+    cursor: pointer;
+    border: 1px solid #B32A2A;
+}
