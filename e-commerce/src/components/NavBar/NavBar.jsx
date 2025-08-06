@@ -5,11 +5,11 @@ import { faMagnifyingGlass, faHeart, faCartShopping } from '@fortawesome/free-so
 
 function NavBar() {
     return (
-        <div className={styles.mainDev}>
-            <div className={styles.titleDev}>
+        <div className={styles.mainDiv}>
+            <div className={styles.titleDiv}>
                 Exclusive
             </div>
-            <div className={styles.pagesButtonsDev}>
+            <div className={styles.pagesButtonsDiv}>
                 <button className={styles.navButton}>
                     Home
                 </button>
@@ -23,8 +23,8 @@ function NavBar() {
                     Sign Up
                 </button>
             </div>
-            <div className={styles.actionsDev}>
-                <div className={styles.searchDev}>
+            <div className={styles.actionsDiv}>
+                <div className={styles.searchDiv}>
                     <input type="search" placeholder="What are you looking for?"/>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} id={styles.searchIcon}/>
                 </div>

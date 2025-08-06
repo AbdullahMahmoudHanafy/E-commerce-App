@@ -53,7 +53,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <p id={styles.copyrightParagraph}>© 2023 Exclusive. All rights reserved.</p>
+            <p id={styles.copyrightParagraph}>© 2025 Exclusive. All rights reserved.</p>
         </div>
     )
 }
