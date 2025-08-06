@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .pagesButtonsDiv {
@@ -26,6 +27,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    background-color: white;
 }
 
 button {
@@ -44,6 +46,7 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .searchDiv {
@@ -52,6 +55,7 @@ button {
     position: relative;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 input {
@@ -66,12 +70,14 @@ input {
 
 .icon{
     padding: 0px 5px 0px 5px;
+    background-color: white;
 }
 
 #searchIcon {
     position: absolute;
     right: 10px;
     color: gray;
+    background-color: #F5F5F5;
     pointer-events: none; /* allows clicks to go through to input */
 }
 
