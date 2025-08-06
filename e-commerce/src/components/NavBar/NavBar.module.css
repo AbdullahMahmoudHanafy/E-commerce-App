@@ -30,14 +30,16 @@
     background-color: white;
 }
 
-button {
+.navButton {
     background-color: transparent;
     color: black;
-}
-
-.navButton {
     width: 100px;
     height: 40px;
+}
+
+.navButton:hover {
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 .actionsDiv {
@@ -86,6 +88,12 @@ input {
     height: 1px;
     background-color: grey;
     width: 100%;
+}
+
+.active {
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 @media (max-width: 1200px) {

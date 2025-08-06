@@ -1,10 +1,11 @@
 import styles from "./NavBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 function NavBar() {
+    const location = useLocation();
     const navigate = useNavigate();
     const handleNavigation = (path) => {
         navigate(path);
@@ -16,16 +17,20 @@ function NavBar() {
                     Exclusive
                 </div>
                 <div className={styles.pagesButtonsDiv}>
-                    <button className={styles.navButton} onClick={() => handleNavigation('/')}>
+                    <button className={`${styles.navButton} ${location.pathname === '/' ? styles.active : ''}`}
+                        onClick={() => handleNavigation('/')}>
                         Home
                     </button>
-                    <button className={styles.navButton} onClick={() => handleNavigation('/contact')}>
+                    <button className={`${styles.navButton} ${location.pathname === '/contact' ? styles.active : ''}`}
+                        onClick={() => handleNavigation('/contact')}>
                         Contact
                     </button>
-                    <button className={styles.navButton} onClick={() => handleNavigation('/about')}>
+                    <button className={`${styles.navButton} ${location.pathname === '/about' ? styles.active : ''}`}
+                        onClick={() => handleNavigation('/about')}>
                         About
                     </button>
-                    <button className={styles.navButton} onClick={() => handleNavigation('/sign-up')}>
+                    <button className={`${styles.navButton} ${location.pathname === '/sign-up' ? styles.active : ''}`}
+                        onClick={() => handleNavigation('/sign-up')}>
                         Sign Up
                     </button>
                 </div>
