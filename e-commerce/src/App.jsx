@@ -9,7 +9,7 @@ function App() {
     <Router>
         <NavBar />
         <Routes>
-            <Route path='/' element={<SignUp/>}/>
+            <Route path='/sign-up' element={<SignUp/>}/>
             <Route path='/sign-in' element={<SignIn/>}/>
             <Route path='/404' element={<Error404 />} />
         </Routes>

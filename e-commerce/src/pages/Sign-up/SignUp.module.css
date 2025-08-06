@@ -56,6 +56,18 @@
     color: black;
     border: 1px solid black;
     border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#googleLogo {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    margin-right: 5px;
 }
 
 .header {

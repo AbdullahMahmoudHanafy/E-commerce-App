@@ -15,6 +15,7 @@ function SignUp() {
                     <div className={styles.buttonsContainer}>
                         <button className={styles.submitButton}>Create Account</button>
                         <button className={styles.signUpWithGoogle}>
+                            <img src="/images/googleLogo.webp" alt="Google logo image" id={styles.googleLogo}/>
                             Sign up with Google
                         </button>
                     </div>
