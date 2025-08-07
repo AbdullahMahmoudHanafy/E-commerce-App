@@ -1,0 +1,79 @@
+.home {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstSection {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 400px;
+}
+
+.leftContainer {
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightSideImg {
+    width: 60%;
+    height: 90%;
+    background-image: url('/images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-right: 100px;
+}
+
+.titlesWithArrow {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+    flex-direction: row;
+    width: 70%;
+    height: auto;
+    padding: 3px;
+}
+
+.titlesWithoutArrow {
+    width: 70%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    text-align: start;
+    padding: 3px;
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+.leftSideTitle {
+    background-color: white;
+    color: black;
+    padding-left: 5px;
+}
+
+.verticalLine {
+    width: 1px;               /* Thin line */
+    height: 100%;            /* Adjust height as needed */
+    background-color: black;  /* Or any color */
+    margin: 0 16px;           /* Optional spacing */
+}
