@@ -132,7 +132,13 @@
 .stars {
   color: #facc15; /* golden yellow */
   display: flex;
+  align-items: center;
   gap: 2px;
   margin: 4px 0;
-  font-size: 0.9rem;
+  font-size: 15px;
+}
+
+.ratingCount {
+  color: #666;
+  font-size: 15px;
 }
