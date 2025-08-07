@@ -78,6 +78,21 @@ function Home() {
                 <button className={styles.viewAllButton}>View All Products</button>
             </div>
         </div>
+        <div className={styles.thirdSection}>
+            <div className={styles.sectionTitle}>
+                <div className={styles.dummyDiv}></div>
+                <p className={styles.redTitle}>Featured</p>
+            </div>
+            <div className={styles.secondRowTitlesContainer}>
+                <p className={styles.secondRowTitles}>New Arrival</p>
+            </div>
+            <div className={styles.imageContainer}>
+                <img className={styles.bigImg} src="/images/playStationFrame.png" alt="" />
+                <img className={styles.mediumImg} src="/images/womenFrame.png" alt="" />
+                <img src="/images/speakersFrame.png" alt="" />
+                <img src="/images/perfumeFrame.png" alt="" />
+            </div>
+        </div>
     </div>
   );
 }
