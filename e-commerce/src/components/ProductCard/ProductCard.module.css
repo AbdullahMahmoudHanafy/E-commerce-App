@@ -142,3 +142,9 @@
   color: #666;
   font-size: 15px;
 }
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

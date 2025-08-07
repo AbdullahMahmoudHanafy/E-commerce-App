@@ -101,12 +101,12 @@
     height: 40px;
     width: 20px;
     border-radius: 5px;
-    background-color: red;
+    background-color: #DB4444;
 }
 
 .redTitle {
     background-color: white;
-    color: red;
+    color: #DB4444;
     padding-left: 10px;
 }
 
@@ -324,9 +324,6 @@
     }
     .imageContainer {
         height: 450px;
-    }
-    .serviceSection {
-        display: ;
     }
 }
 
