@@ -154,6 +154,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: end;
+    gap: 4px;
     width: 10%;
 }
 
@@ -172,10 +173,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
     height: auto;
     margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.productCardsContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .buttonsContainer {
