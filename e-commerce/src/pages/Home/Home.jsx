@@ -1,8 +1,14 @@
 import styles from './Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { ProductCard } from '../../components';
 
 function Home() {
+    const products = [
+        { name: "HAVIT HV-G92 Gamepad" },
+        { name: "AK-900 Wired Keyboard" },
+        { name: "IPS LCD Gaming Monitor" }
+    ]
   return (
     <div className={styles.home}>
         <div className={styles.firstSection}>
@@ -34,7 +40,7 @@ function Home() {
             <div className={styles.secondRow}>
                 <div className={styles.secondRowTitlesContainer}>
                     <p className={styles.secondRowTitles}>Flash Sales</p>
-                    <p className={styles.secondRowTitles}>03<p className={styles.redMarkers}>:</p>23<p className={styles.redMarkers}>:</p>19<p className={styles.redMarkers}>:</p>56</p>
+                    <p className={styles.secondRowTitles}>03<p className={styles.redMarkers}> : </p>23<p className={styles.redMarkers}> : </p>19<p className={styles.redMarkers}> : </p>56</p>
                 </div>
                 <div className={styles.navigators}>
                     <button className={styles.navigationButton}><FontAwesomeIcon icon={faAngleLeft} /></button>
@@ -42,7 +48,11 @@ function Home() {
                 </div>
             </div>
             <div className={styles.content}>
-
+                <div className={styles.productCardsContainer}>
+                    {products.map((product, index) => (
+                        <ProductCard key={index} name={product.name} />
+                    ))}
+                </div>
             </div>
             <div className={styles.buttonsContainer}>
                 <button className={styles.viewAllButton}>View All Products</button>

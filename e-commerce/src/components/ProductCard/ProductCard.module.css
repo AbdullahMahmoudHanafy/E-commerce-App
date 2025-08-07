@@ -1,0 +1,130 @@
+.mainContainer {
+    width: 250px;
+    height: 300px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: start;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    background-color: #F5F5F5;
+    width: 190px;
+    height: 190px;
+    height: auto;
+    display: block;
+}
+
+.addToCart {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.card:hover .addToCart {
+    display: block;
+  transform: translateY(0%);
+}
+
+/* This will be at the top-left corner */
+.discountBadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #DB4444;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This will be at the top-right corner */
+.button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 0.3s;
+    width: 30px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#seenButton {
+    top: 43px;
+}
+
+.button:hover, .icon:hover, .button:hover .icon {
+    background-color: #DB4444;
+    border: 1px solid #DB4444;
+}
+
+
+/* Product info (title & price) below the image */
+.info {
+  padding: 10px 0px 10px 0px;
+}
+
+.title {
+  font-size: 16px;
+  margin: 0;
+  background-color: white;
+  text-align: start;
+}
+.priceContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+}
+
+.finalPrice {
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+.originalPrice {
+    background-color: white;
+    font-size: 15px;
+    color: gray;
+    text-decoration: line-through;
+}
