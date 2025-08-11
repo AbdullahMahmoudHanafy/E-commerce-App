@@ -24,7 +24,7 @@ function WishList() {
             </div>
             <div className={styles.productContainer}>
                 {products.map((product, index) => (
-                    <ProductCard key={index} product={product} />
+                    <ProductCard key={index} product={product} wishListed={true}/>
                 ))}
             </div>
         </div>
