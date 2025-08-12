@@ -18,6 +18,12 @@ function WishList() {
         setWishlist(updated);
         localStorage.setItem("wishlist", JSON.stringify(updated));
     }
+    function saveToWishlist(product) {
+        let newWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        newWishlist.push(product);
+        setWishlist(newWishlist);
+        localStorage.setItem('wishlist', JSON.stringify(newWishlist));
+    }
     const products = [
         { name: "HAVIT HV-G92 Gamepad", rating: 4.5, ratingCount: 150, price: 120, discount: 40, lastPrice: 160, image: "/images/products/gamepad.png", id: 1 },
         { name: "AK-900 Wired Keyboard", rating: 4.0, ratingCount: 200, price: 960, discount: 35, lastPrice: 1160, image: "/images/products/keyboard.png", id: 2 },
@@ -43,7 +49,7 @@ function WishList() {
                 </div>
                 <button className={styles.headerButton}>See All</button>
             </div>
-            <ProductList products={products} />
+            <ProductList products={products} onAddToWishlist={saveToWishlist}/>
         </div>
     );
 }

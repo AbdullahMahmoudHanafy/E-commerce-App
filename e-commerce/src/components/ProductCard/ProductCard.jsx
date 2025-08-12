@@ -4,12 +4,7 @@ import { faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faStar as solidStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
-function ProductCard({product, wishListed = false, onRemove = () => {}}) {
-    function saveToWishlist(product) {
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        wishlist.push(product);
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    }
+function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToWishlist = () => {}}) {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.card}>
@@ -19,7 +14,7 @@ function ProductCard({product, wishListed = false, onRemove = () => {}}) {
                 {!wishListed && (
                     <>
                         <button className={styles.button}>
-                            <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => saveToWishlist(product)}/>
+                            <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => onAddToWishlist(product)}/>
                         </button>
                         <button className={styles.button} id={styles.seenButton}>
                             <FontAwesomeIcon icon={faEye} className={styles.icon}/>
