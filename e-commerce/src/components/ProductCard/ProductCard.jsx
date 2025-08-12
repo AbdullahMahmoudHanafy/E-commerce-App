@@ -5,6 +5,16 @@ import { faStar as solidStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-
 import { faStar as regularStar, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 
 function ProductCard({product, wishListed = false}) {
+    function saveToWishlist(product) {
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+    function removeFromWishlist(productId) {
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist = wishlist.filter(item => item.id !== productId);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
     return (
         <div className={styles.mainContainer}>
             <div className={styles.card}>
@@ -14,7 +24,7 @@ function ProductCard({product, wishListed = false}) {
                 {!wishListed && (
                     <>
                         <button className={styles.button}>
-                            <FontAwesomeIcon icon={faHeart} className={styles.icon} />
+                            <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => saveToWishlist(product)}/>
                         </button>
                         <button className={styles.button} id={styles.seenButton}>
                             <FontAwesomeIcon icon={faEye} className={styles.icon}/>
@@ -23,7 +33,7 @@ function ProductCard({product, wishListed = false}) {
                 )}
                 {wishListed &&
                     <button className={styles.button}>
-                        <FontAwesomeIcon icon={faTrashCan}  className={styles.icon}/>
+                        <FontAwesomeIcon icon={faTrashCan} className={styles.icon} onClick={() => removeFromWishlist(product.id)}/>
                     </button>
                 }
             </div>
