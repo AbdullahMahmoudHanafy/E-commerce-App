@@ -39,7 +39,7 @@ function NavBar() {
                         <input type="search" placeholder="What are you looking for?"/>
                         <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} id={styles.searchIcon}/>
                     </div>
-                    <FontAwesomeIcon icon={faHeart} className={styles.icon}/>
+                    <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleNavigation('/wish-list')}/>
                     <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
                     <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/sign-in')}/>
                 </div>
