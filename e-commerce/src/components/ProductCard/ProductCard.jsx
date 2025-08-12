@@ -10,7 +10,6 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
             <div className={styles.card}>
                 <img src={product.image} alt="Product" className={styles.image} />
                 <div className={styles.addToCart}>Add to Cart</div>
-                <div className={styles.discountBadge}>-{product.discount}%</div>
                 {!wishListed && (
                     <>
                         <button className={styles.button}>
@@ -28,7 +27,11 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
                 }
             </div>
             <div className={styles.info}>
-                <p className={styles.title}>{product.title}</p>
+                <p className={styles.title}>
+                    {product.title.length > 20 
+                    ? product.title.slice(0, 20) + "..." 
+                    : product.title}
+                </p>
                 <div className={styles.priceContainer}>
                     <p className={styles.finalPrice}>${product.price}</p>
                 </div>
