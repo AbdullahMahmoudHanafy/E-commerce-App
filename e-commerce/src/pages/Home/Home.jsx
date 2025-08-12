@@ -4,6 +4,7 @@ import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTruck, faHeadphones, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { ProductCard } from '../../components';
 import { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const scrollRef = useRef();
@@ -40,6 +41,11 @@ function Home() {
         })
         .catch(err => console.error("Fetch error:", err));
     }, []);
+
+    const navigate = useNavigate();
+    function navigateToProductsPage() {
+        navigate('/products', { state: { products: data } });
+    }
   return (
     <div className={styles.home}>
         <div className={styles.firstSection}>
@@ -86,7 +92,7 @@ function Home() {
                 </div>
             </div>
             <div className={styles.buttonsContainer}>
-                <button className={styles.viewAllButton}>View All Products</button>
+                <button className={styles.viewAllButton} onClick={navigateToProductsPage}>View All Products</button>
             </div>
         </div>
         <div className={styles.thirdSection}>
