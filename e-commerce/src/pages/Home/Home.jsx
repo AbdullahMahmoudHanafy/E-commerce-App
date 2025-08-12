@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faTruck, faHeadphones, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { ProductCard } from '../../components';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 function Home() {
     const scrollRef = useRef();
@@ -18,18 +18,20 @@ function Home() {
             });
         }
     };
-    const products = [
-        { name: "HAVIT HV-G92 Gamepad", rating: 4.5, ratingCount: 150, price: 120, discount: 40, lastPrice: 160, image: "/images/products/gamepad.png", id: 1 },
-        { name: "AK-900 Wired Keyboard", rating: 4.0, ratingCount: 200, price: 960, discount: 35, lastPrice: 1160, image: "/images/products/keyboard.png", id: 2 },
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 3 },
-        { name: "S-Series Comfort Chair ", rating: 4.6, ratingCount: 99, price: 375, discount: 25, lastPrice: 400, image: "/images/products/chair.png", id: 4 },
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 5 },
-        { name: "HAVIT HV-G92 Gamepad", rating: 4.5, ratingCount: 150, price: 120, discount: 40, lastPrice: 160, image: "/images/products/gamepad.png", id: 6 },
-        { name: "AK-900 Wired Keyboard", rating: 4.0, ratingCount: 200, price: 960, discount: 35, lastPrice: 1160, image: "/images/products/keyboard.png", id: 7 },
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 8 },
-        { name: "S-Series Comfort Chair ", rating: 4.6, ratingCount: 99, price: 375, discount: 25, lastPrice: 400, image: "/images/products/chair.png", id: 9},
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 10 }
-    ]
+    const [products, setProducts] = useState(null);
+
+    useEffect(() => {
+        fetch("https://fakestoreapi.com/products")
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+            return res.json();
+        })
+        .then(json => {
+            setProducts(json);
+            console.log("Fetched data:", json);
+        })
+        .catch(err => console.error("Fetch error:", err));
+    }, []);
   return (
     <div className={styles.home}>
         <div className={styles.firstSection}>
@@ -70,7 +72,7 @@ function Home() {
             </div>
             <div className={styles.content}>
                 <div className={styles.productCardsContainer} ref={scrollRef}>
-                    {products.map((product, index) => (
+                    {products && products.map((product, index) => (
                         <ProductCard key={index} product={product}/>
                     ))}
                 </div>

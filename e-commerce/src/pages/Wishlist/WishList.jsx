@@ -1,5 +1,5 @@
 import styles from "./WishList.module.css";
-import { ProductCard, ProductList } from "../../components";
+import { ProductList } from "../../components";
 import { useEffect, useState } from "react";
 
 function WishList() {

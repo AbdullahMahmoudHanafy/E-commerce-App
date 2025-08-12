@@ -28,23 +28,22 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
                 }
             </div>
             <div className={styles.info}>
-                <p className={styles.title}>{product.name}</p>
+                <p className={styles.title}>{product.title}</p>
                 <div className={styles.priceContainer}>
                     <p className={styles.finalPrice}>${product.price}</p>
-                    <p className={styles.originalPrice}>${product.lastPrice}</p>
                 </div>
                 {!wishListed && (
                     <div className={styles.stars}>
                         {Array.from({ length: 5 }, (_, index) => {
-                            if (product.rating >= index + 1) {
+                            if (product.rating['rate'] >= index + 1) {
                             return <FontAwesomeIcon key={index} icon={solidStar} />;
-                            } else if (product.rating > index && product.rating < index + 1) {
+                            } else if (product.rating['rate'] > index && product.rating['rate'] < index + 1) {
                             return <FontAwesomeIcon key={index} icon={faStarHalfAlt} />;
                             } else {
                             return <FontAwesomeIcon key={index} icon={regularStar} />;
                             }
                         })}
-                        <span className={styles.ratingCount}>  ({product.ratingCount})</span>
+                        <span className={styles.ratingCount}>  ({product.rating['count']})</span>
                     </div>
                 )}
             </div>
