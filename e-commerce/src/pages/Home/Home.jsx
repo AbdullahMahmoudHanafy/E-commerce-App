@@ -18,7 +18,14 @@ function Home() {
             });
         }
     };
+
+    function saveToWishlist(product) {
+        let newWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        newWishlist.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(newWishlist));
+    }
     const [products, setProducts] = useState(null);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -27,7 +34,8 @@ function Home() {
             return res.json();
         })
         .then(json => {
-            setProducts(json);
+            setData(json);
+            setProducts(json.slice(0, 10));
             console.log("Fetched data:", json);
         })
         .catch(err => console.error("Fetch error:", err));
@@ -73,7 +81,7 @@ function Home() {
             <div className={styles.content}>
                 <div className={styles.productCardsContainer} ref={scrollRef}>
                     {products && products.map((product, index) => (
-                        <ProductCard key={index} product={product}/>
+                        <ProductCard key={index} product={product} onAddToWishlist={saveToWishlist}/>
                     ))}
                 </div>
             </div>

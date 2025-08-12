@@ -1,14 +1,14 @@
 .mainContainer {
     margin: 10px 0px 40px 0px;
     width: 80%;
-    gap: 20px;
+    column-gap: 60px;
     background-color: white;
     color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 @media (max-width: 700px) {

@@ -24,13 +24,21 @@ function WishList() {
         setWishlist(newWishlist);
         localStorage.setItem('wishlist', JSON.stringify(newWishlist));
     }
-    const products = [
-        { name: "HAVIT HV-G92 Gamepad", rating: 4.5, ratingCount: 150, price: 120, discount: 40, lastPrice: 160, image: "/images/products/gamepad.png", id: 1 },
-        { name: "AK-900 Wired Keyboard", rating: 4.0, ratingCount: 200, price: 960, discount: 35, lastPrice: 1160, image: "/images/products/keyboard.png", id: 2 },
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 3 },
-        { name: "S-Series Comfort Chair ", rating: 4.6, ratingCount: 99, price: 375, discount: 25, lastPrice: 400, image: "/images/products/chair.png", id: 4 },
-        { name: "IPS LCD Gaming Monitor", rating: 4.2, ratingCount: 180, price: 370, discount: 30, lastPrice: 400, image: "/images/products/ipsscreen.png", id: 5 },
-    ]
+    const [products, setProducts] = useState(null);
+    const [techProducts, setTechProducts] = useState(null);
+    useEffect(() => {
+        fetch("https://fakestoreapi.com/products")
+        .then(res => {
+            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+            return res.json();
+        })
+        .then(json => {
+            setProducts(json);
+            setTechProducts(json.filter(item => item.category === "electronics").slice(0, 5));
+            console.log("Fetched data:", json);
+        })
+        .catch(err => console.error("Fetch error:", err));
+    }, []);
     return (
         <div className={styles.mainContainer}>
             <div className={styles.headerContainer}>
@@ -41,7 +49,7 @@ function WishList() {
                     Move All To Bag
                 </button>
             </div>
-            <ProductList products={wishlist} wishListed={true} onRemove={removeFromWishlist}/>
+            {products && <ProductList products={wishlist} wishListed={true} onRemove={removeFromWishlist}/> }
             <div className={styles.sectionTitle}>
                 <div className={styles.titleContainer}>
                     <div className={styles.dummyDiv}></div>
@@ -49,7 +57,7 @@ function WishList() {
                 </div>
                 <button className={styles.headerButton}>See All</button>
             </div>
-            <ProductList products={products} onAddToWishlist={saveToWishlist}/>
+            {products && <ProductList products={techProducts} onAddToWishlist={saveToWishlist}/>}
         </div>
     );
 }
