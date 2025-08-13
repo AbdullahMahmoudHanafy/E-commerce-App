@@ -25,6 +25,7 @@
 .productImg {
     width: auto;
     height: auto;
+    max-width: 80%;
     object-fit: cover;
     background-color: #F5F5F5;
 }
@@ -326,4 +327,27 @@ input[type=number] {
 .serviceTitle {
     font-size: 18px;
     font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .mainContainer {
+        flex-direction: column;
+        height: auto;
+        row-gap: 50px;
+    }
+    .imageContainer {
+        width: 80%;
+        height: auto;
+    }
+    .productImg {
+        height: auto;
+        width: auto;
+        max-width: 80%;
+        margin: 20px 0px 20px 0px;
+    }
+    .info {
+        width: 80%;
+        height: auto;
+        padding-left: 0px;
+    }
 }
