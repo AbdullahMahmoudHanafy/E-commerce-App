@@ -4,5 +4,6 @@ import SignUp from "./Sign-up/SignUp";
 import Home from "./Home/Home";
 import WishList from "./Wishlist/WishList";
 import Products from "./Products/Products";
+import ProductDetails from "./Product-Details/ProductDetails";
 
-export { Error404, SignIn, SignUp, Home, WishList, Products };
+export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails };

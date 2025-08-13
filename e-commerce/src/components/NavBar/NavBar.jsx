@@ -12,38 +12,39 @@ function NavBar() {
     };
     return (
         <>
-            <div className={styles.mainDiv}>
-                <div className={styles.titleDiv}>
-                    Exclusive
-                </div>
-                <div className={styles.pagesButtonsDiv}>
-                    <button className={`${styles.navButton} ${location.pathname === '/' ? styles.active : ''}`}
-                        onClick={() => handleNavigation('/')}>
-                        Home
-                    </button>
-                    <button className={`${styles.navButton} ${location.pathname === '/contact' ? styles.active : ''}`}
-                        onClick={() => handleNavigation('/contact')}>
-                        Contact
-                    </button>
-                    <button className={`${styles.navButton} ${location.pathname === '/about' ? styles.active : ''}`}
-                        onClick={() => handleNavigation('/about')}>
-                        About
-                    </button>
-                    <button className={`${styles.navButton} ${location.pathname === '/sign-up' ? styles.active : ''}`}
-                        onClick={() => handleNavigation('/sign-up')}>
-                        Sign Up
-                    </button>
-                </div>
-                <div className={styles.actionsDiv}>
-                    <div className={styles.searchDiv}>
-                        <input type="search" placeholder="What are you looking for?"/>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} id={styles.searchIcon}/>
+            <div className={styles.container}>
+                <div className={styles.mainDiv}>
+                    <div className={styles.titleDiv}>
+                        Exclusive
                     </div>
-                    <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleNavigation('/wish-list')}/>
-                    <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
-                    <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/sign-in')}/>
+                    <div className={styles.pagesButtonsDiv}>
+                        <button className={`${styles.navButton} ${location.pathname === '/' ? styles.active : ''}`}
+                            onClick={() => handleNavigation('/')}>
+                            Home
+                        </button>
+                        <button className={`${styles.navButton} ${location.pathname === '/contact' ? styles.active : ''}`}
+                            onClick={() => handleNavigation('/contact')}>
+                            Contact
+                        </button>
+                        <button className={`${styles.navButton} ${location.pathname === '/about' ? styles.active : ''}`}
+                            onClick={() => handleNavigation('/about')}>
+                            About
+                        </button>
+                        <button className={`${styles.navButton} ${location.pathname === '/sign-up' ? styles.active : ''}`}
+                            onClick={() => handleNavigation('/sign-up')}>
+                            Sign Up
+                        </button>
+                    </div>
+                    <div className={styles.actionsDiv}>
+                        <div className={styles.searchDiv}>
+                            <input type="search" placeholder="What are you looking for?"/>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} id={styles.searchIcon}/>
+                        </div>
+                        <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleNavigation('/wish-list')}/>
+                        <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
+                        <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/sign-in')}/>
+                    </div>
                 </div>
-                
             </div>
             <hr id={styles.hr}/>
         </>

@@ -1,0 +1,329 @@
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.imageContainer {
+    width: 40%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    color: black;
+}
+
+.productImg {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    background-color: #F5F5F5;
+}
+
+.info {
+    width: 40%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding-left: 50px;
+    row-gap: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ratingDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    color: black;
+    gap: 10px;
+}
+
+.stars {
+  color: #facc15; /* golden yellow */
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.ratingCount {
+  color: #666;
+  font-size: 15px;
+  background-color: white;
+  width: auto;
+  min-width: 120px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.inStock {
+    color: #00FF66;
+    background-color: white;
+    width: auto;
+    min-width: 120px;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.price {
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.description {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+.chooseDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    color: black;
+    gap: 10px;
+}
+
+.chooseDiv p {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    width: auto;
+}
+
+.chooseDiv .colorsButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    color: black;
+    gap: 5px;
+}
+
+.chooseDiv .colorButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+}
+
+#blue {
+    background-color: #A0BCE0;
+    margin-left: 20px;
+}
+
+#red {
+    background-color: #E07575;
+}
+
+.selectedColor {
+  border: 2px solid black; /* or any style you want */
+}
+
+.baseButton {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px 5px 0px 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.selectedSize {
+    background-color: #DB4444;
+    border: none;
+    color: white;
+}
+
+.buyDiv {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    color: black;
+    column-gap: 10px;
+}
+
+.buyDiv button {
+    height: 100%;
+}
+
+.quantityDiv {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+.quantityDiv button {
+    border: 1px solid grey;
+    border-radius: 0px;
+    width: 30%;
+    padding: 0px;
+    margin: 0px;
+    height: 40px;
+    font-size: 25px;
+}
+
+.quantityDiv input {
+    border: 1px solid grey;
+    text-align: center;
+    width: 40%;
+    padding: 0px;
+}
+
+#minus {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-right: none;
+    text-align: center;
+}
+
+#plus {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #DB4444;
+    color: white;
+    border: 1px solid #DB4444;
+    border-left: none;
+}
+
+/* For Chrome, Edge, Safari, and other WebKit browsers */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.wishlistIcon {
+    font-size: 19px;
+}
+
+.buyButton {
+    background-color: #DB4444;
+    border-radius: 5px;
+    width: auto;
+    min-width: 130px;
+    color: white;
+}
+
+.serviceDiv {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    align-items: start;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.serviceDetails {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 48%;
+    background-color: white;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.serviceIcon{
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    height: 99%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    row-gap: 5px;
+}
+
+.textDiv p {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    text-align: start;
+}
+
+.serviceTitle {
+    font-size: 18px;
+    font-weight: bold;
+}

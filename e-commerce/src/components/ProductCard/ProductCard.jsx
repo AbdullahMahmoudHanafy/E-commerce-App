@@ -3,11 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faStar as solidStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToWishlist = () => {}}) {
+    const navigate = useNavigate();
+
+    function handleProductClick() {
+        navigate(`/products/${product.id}`);
+    }
     return (
         <div className={styles.mainContainer}>
-            <div className={styles.card}>
+            <div className={styles.card} onClick={handleProductClick}>
                 <img src={product.image} alt="Product" className={styles.image} />
                 <div className={styles.addToCart}>Add to Cart</div>
                 {!wishListed && (
