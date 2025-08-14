@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStarHalfAlt, faHeart, faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTruck } from '@fortawesome/free-regular-svg-icons';
 import {ProductList} from '../../components';
-import { saveToWishlist } from '../../services';
+import { saveToWishlist, getProduct, getAllProducts } from '../../services';
 
 function ProductDetails() {
     const [selectedColor, setSelectedColor] = useState("blue");
@@ -16,23 +16,20 @@ function ProductDetails() {
     const [suggestedProducts, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                setProduct(data);
-                const category = data.category;
-                fetch("https://fakestoreapi.com/products")
-                .then(res => {
-                    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-                    return res.json();
-                })
-                .then(json => {
-                    const filteredProducts = json.filter(product => product.category === category).slice(0, 5);
-                    setProducts(filteredProducts);
-                })
-                .catch(err => console.error("Fetch error:", err));
-            })
-            .catch(err => console.error(err));
+        async function fetchData() {
+        const productData = await getProduct(id);
+        console.log(productData);
+        setProduct(productData);
+
+        if (productData) {
+            const productCategory = productData.category;
+            const sameCategoryData = (await getAllProducts())
+                .filter(p => p.category === productCategory)
+                .slice(0, 5);
+            setProducts(sameCategoryData);
+        }
+    }
+    fetchData();
     }, [id]);
 
     const sizes = ["XS", "S", "M", "L", "XL"];
