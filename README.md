@@ -2,17 +2,20 @@
 
 ## 📄 Pages
 
-### 🖼️ Home Page
-![First Section in Home Page](/e-commerce/public/images/Readme-images/image.png)
-![Today's Sales Section in Home Page](/e-commerce/public/images/Readme-images/image-1.png)
-![Features Section in Home Page](/e-commerce/public/images/Readme-images/image-2.png)
-![Service Section in Home Page](/e-commerce/public/images/Readme-images/image-3.png)
+### 🛒 Product Page
+![Product Details](image.png)  
+![Product details with related items](image-1.png)  
+![Responsive product details](image-2.png)  
+![Responsive related items](image-3.png)  
 
-### 👤 Sign-Up Page
-![Sign Up Page](/e-commerce/public/images/Readme-images/image-4.png)
+### 👤 Account Page
+![Full Account page](image-4.png)  
+![Responsive Account page](image-5.png)  
 
-### 🔐 Sign-In Page
-![Sign In Page](/e-commerce/public/images/Readme-images/image-5.png)
+### ❤️ Wishlist Page
+![Full Wishlist page](image-6.png)  
+![Responsive Wishlist page](image-7.png)  
 
-### ❌ Error Page
-![Error Page](/e-commerce/public/images/Readme-images/image-6.png)
+### 🗂️ Products Page
+![Full Products page](image-8.png)  
+![Responsive Products page](image-9.png)  
