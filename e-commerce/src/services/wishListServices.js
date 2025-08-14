@@ -10,7 +10,6 @@
         }
         wishlist.push(product);
         localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        console.log("WHHHHHHHHHHHHHHHAT")
     }
 
     function removeFromWishlist(productId) {

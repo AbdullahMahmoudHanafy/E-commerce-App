@@ -10,7 +10,6 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
 
     function handleProductClick() {
         navigate(`/products/${product.id}`);
-        console.log("Navigate to product details");
     }
     return (
         <div className={styles.mainContainer}>
