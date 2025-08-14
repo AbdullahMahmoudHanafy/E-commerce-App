@@ -122,7 +122,7 @@ function ProductDetails() {
                                 </button>
                             </div>
                             <button className={styles.buyButton}>Buy Now</button>
-                            <button className={styles.baseButton}>
+                            <button className={styles.baseButton} onClick={saveToWishlist(product)}>
                                 <FontAwesomeIcon icon={faHeart} className={styles.wishlistIcon} />
                             </button>
                         </div>
