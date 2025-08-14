@@ -19,7 +19,6 @@ function ProductDetails() {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setProduct(data);
                 const category = data.category;
                 fetch("https://fakestoreapi.com/products")
@@ -29,7 +28,6 @@ function ProductDetails() {
                 })
                 .then(json => {
                     const filteredProducts = json.filter(product => product.category === category).slice(0, 5);
-                    console.log(filteredProducts);
                     setProducts(filteredProducts);
                 })
                 .catch(err => console.error("Fetch error:", err));
@@ -122,7 +120,7 @@ function ProductDetails() {
                                 </button>
                             </div>
                             <button className={styles.buyButton}>Buy Now</button>
-                            <button className={styles.baseButton} onClick={saveToWishlist(product)}>
+                            <button className={styles.baseButton} onClick={() => saveToWishlist(product)}>
                                 <FontAwesomeIcon icon={faHeart} className={styles.wishlistIcon} />
                             </button>
                         </div>

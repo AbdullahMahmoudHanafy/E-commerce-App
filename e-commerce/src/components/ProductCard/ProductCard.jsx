@@ -10,11 +10,12 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
 
     function handleProductClick() {
         navigate(`/products/${product.id}`);
+        console.log("Navigate to product details");
     }
     return (
         <div className={styles.mainContainer}>
-            <div className={styles.card} onClick={handleProductClick}>
-                <img src={product.image} alt="Product" className={styles.image} />
+            <div className={styles.card}>
+                <img src={product.image} alt="Product" className={styles.image}  onClick={handleProductClick}/>
                 <div className={styles.addToCart}>Add to Cart</div>
                 {!wishListed && (
                     <>

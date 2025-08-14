@@ -33,7 +33,6 @@ function Home() {
         .then(json => {
             setData(json);
             setProducts(json.slice(0, 10));
-            console.log("Fetched data:", json);
         })
         .catch(err => console.error("Fetch error:", err));
     }, []);

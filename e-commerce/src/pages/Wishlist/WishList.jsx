@@ -1,29 +1,23 @@
 import styles from "./WishList.module.css";
 import { ProductList } from "../../components";
 import { useEffect, useState } from "react";
+import { removeFromWishlistAndRefresh, loadWishlist, saveToWishlistAndRefresh } from "../../services";
 
 function WishList() {
     const [wishlist, setWishlist] = useState([]);
-
-    function loadWishlist() {
-        return JSON.parse(localStorage.getItem("wishlist")) || [];
-    }
 
     useEffect(() => {
         setWishlist(loadWishlist());
     }, []);
 
-    function removeFromWishlist(productId) {
-        const updated = wishlist.filter(item => item.id !== productId);
-        setWishlist(updated);
-        localStorage.setItem("wishlist", JSON.stringify(updated));
-    }
     function saveToWishlist(product) {
-        let newWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        newWishlist.push(product);
-        setWishlist(newWishlist);
-        localStorage.setItem('wishlist', JSON.stringify(newWishlist));
+        setWishlist(saveToWishlistAndRefresh(product));
     }
+
+    function removeFromWishlist(productId) {
+        setWishlist(removeFromWishlistAndRefresh(productId));
+    }
+    
     const [products, setProducts] = useState(null);
     const [techProducts, setTechProducts] = useState(null);
     useEffect(() => {
@@ -35,7 +29,6 @@ function WishList() {
         .then(json => {
             setProducts(json);
             setTechProducts(json.filter(item => item.category === "electronics").slice(0, 5));
-            console.log("Fetched data:", json);
         })
         .catch(err => console.error("Fetch error:", err));
     }, []);

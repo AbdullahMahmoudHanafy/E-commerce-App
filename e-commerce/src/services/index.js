@@ -1,3 +1,3 @@
-import { saveToWishlist } from "./wishListServices";
+import { saveToWishlist, loadWishlist, removeFromWishlist, saveToWishlistAndRefresh, removeFromWishlistAndRefresh } from "./wishListServices";
 
-export { saveToWishlist };
+export { saveToWishlist, loadWishlist, removeFromWishlist, saveToWishlistAndRefresh, removeFromWishlistAndRefresh };
