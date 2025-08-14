@@ -176,3 +176,15 @@
     font-size: 15px;
     border-color: #DB4444;
 }
+
+@media (max-width: 1050px) {
+    .mainContainer {
+        width: 94%;
+        margin: 0% 3% 0% 3%;
+    }
+    .contentDiv {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+}
