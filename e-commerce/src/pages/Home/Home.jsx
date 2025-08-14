@@ -5,7 +5,7 @@ import { faTruck, faHeadphones, faSquareCheck } from '@fortawesome/free-regular-
 import { ProductCard } from '../../components';
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveToWishlist } from '../../services';
+import { saveToWishlist, getAllProducts } from '../../services';
 
 function Home() {
     const scrollRef = useRef();
@@ -25,16 +25,12 @@ function Home() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("https://fakestoreapi.com/products")
-        .then(res => {
-            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-            return res.json();
-        })
-        .then(json => {
-            setData(json);
-            setProducts(json.slice(0, 10));
-        })
-        .catch(err => console.error("Fetch error:", err));
+        async function fetchData() {
+            const allProducts = await getAllProducts();
+            setData(allProducts);
+            setProducts(allProducts.slice(0, 10));
+        }
+        fetchData();
     }, []);
 
     const navigate = useNavigate();
