@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStarHalfAlt, faHeart, faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTruck } from '@fortawesome/free-regular-svg-icons';
-import {ProductList} from '../../components'
+import {ProductList} from '../../components';
+import { saveToWishlist } from '../../services';
 
 function ProductDetails() {
     const [selectedColor, setSelectedColor] = useState("blue");
@@ -149,7 +150,7 @@ function ProductDetails() {
                         <div className={styles.dummyDiv}></div>
                         <p className={styles.recommendedTitle}>Just For You</p>
                     </div>
-                    <ProductList products={suggestedProducts}/>
+                    <ProductList products={suggestedProducts} saveToWishlist={saveToWishlist}/>
                 </div>
             </div>
         ) : (
