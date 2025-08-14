@@ -1,5 +1,6 @@
 import styles from './Account.module.css';
 import { useEffect, useState } from 'react';
+import { getCurrentUser, setCurrentUser } from '../../services';
 
 function Account() {
     const titlesList = [{title: "Manage My Account", subTitles: ["My Profile", "Address Book", "My Payment Options"]},
@@ -22,7 +23,7 @@ function Account() {
     });
 
     useEffect(() => {
-        const user = JSON.parse(localStorage.getItem("user"));
+        const user = getCurrentUser();
         setUserData(user);
     }, []);
 
@@ -57,7 +58,7 @@ function Account() {
             console.log(passwordFields)
             userData.password = passwordFields.newPassword;
         }
-        localStorage.setItem("user", JSON.stringify(userData));
+        setCurrentUser(userData);
         alert("Profile updated!");
     };
 
