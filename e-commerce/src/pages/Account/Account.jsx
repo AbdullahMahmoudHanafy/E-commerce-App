@@ -6,6 +6,8 @@ function Account() {
     {title: "My Orders", subTitles: ["My Returns", "My Cancellations"]},
     {title: "My Wishlists", subTitles: []}]
 
+    const [selectedSubtitle, setSelectedSubtitle] = useState("My Profile");
+
     const [userData, setUserData] = useState({
         firstName: "",
         lastName: "",
@@ -62,7 +64,7 @@ function Account() {
     return (
         <div className={styles.mainContainer}>
             <div className={styles.breadcrumb}>
-                <p className={styles.blackText}><a href="/home">Home</a> / Account</p>
+                <p className={styles.blackText}><a href="http://localhost:5173/">Home</a> / Account</p>
                 <div className={styles.nameDiv}>
                     <p className={styles.blackText}>welcome! </p>
                     <p className={styles.name}>{userData.firstName}!</p>
@@ -72,12 +74,18 @@ function Account() {
                 <div className={styles.navigatorsDiv}>
                     <div>
                         {titlesList.map((title, index) => (
-                            <div className={styles.titleDiv} key={index}>
-                                <p className={styles.title}>{title.title}</p>
-                                {title.subTitles.map((subtitle, index) => (
-                                    <p className={styles.subtitle} key={index}>{subtitle}</p>
-                                ))}
-                            </div>
+                        <div className={styles.titleDiv} key={index}>
+                            <p className={styles.title}>{title.title}</p>
+                            {title.subTitles.map((subtitle, subIndex) => (
+                            <p
+                                key={subIndex}
+                                className={`${styles.subtitle} ${selectedSubtitle === subtitle ? styles.selectedSubtitle : ""}`}
+                                onClick={() => setSelectedSubtitle(subtitle)}
+                            >
+                                {subtitle}
+                            </p>
+                            ))}
+                        </div>
                         ))}
                     </div>
                 </div>

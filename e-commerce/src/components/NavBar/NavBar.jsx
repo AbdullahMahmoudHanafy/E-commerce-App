@@ -42,7 +42,7 @@ function NavBar() {
                         </div>
                         <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleNavigation('/wish-list')}/>
                         <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
-                        <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/sign-in')}/>
+                        <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/account')}/>
                     </div>
                 </div>
             </div>
