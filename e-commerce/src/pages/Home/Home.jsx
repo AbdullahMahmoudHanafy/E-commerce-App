@@ -5,6 +5,7 @@ import { faTruck, faHeadphones, faSquareCheck } from '@fortawesome/free-regular-
 import { ProductCard } from '../../components';
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { saveToWishlist } from '../../services';
 
 function Home() {
     const scrollRef = useRef();
@@ -20,11 +21,6 @@ function Home() {
         }
     };
 
-    function saveToWishlist(product) {
-        let newWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        newWishlist.push(product);
-        localStorage.setItem('wishlist', JSON.stringify(newWishlist));
-    }
     const [products, setProducts] = useState(null);
     const [data, setData] = useState([]);
 
