@@ -16,6 +16,8 @@ function Account() {
         address: ""
     });
 
+    const [userName, setUserName] = useState("");
+
     const [passwordFields, setPasswordFields] = useState({
         currentPassword: "",
         newPassword: "",
@@ -25,6 +27,7 @@ function Account() {
     useEffect(() => {
         const user = getCurrentUser();
         setUserData(user);
+        setUserName(user.firstName);
     }, []);
 
     const handleInputChange = (e) => {
@@ -59,6 +62,7 @@ function Account() {
             userData.password = passwordFields.newPassword;
         }
         setCurrentUser(userData);
+        setUserName(userData.firstName);
         alert("Profile updated!");
     };
 
@@ -68,7 +72,7 @@ function Account() {
                 <p className={styles.blackText}><a href="http://localhost:5173/">Home</a> / Account</p>
                 <div className={styles.nameDiv}>
                     <p className={styles.blackText}>welcome! </p>
-                    <p className={styles.name}>{userData.firstName}!</p>
+                    <p className={styles.name}>{userName}!</p>
                 </div>
             </div>
             <div className={styles.contentDiv}>
