@@ -214,3 +214,12 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 800px) {
+    .cartTitles {
+        padding: 0px 5px 0px 5px;
+    }
+    #productTitle {
+        width: 130px;
+    }
+}

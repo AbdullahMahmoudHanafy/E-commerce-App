@@ -35,9 +35,7 @@ function CartCard({ product, onRemove, onUpdateAmount }) {
                 </div>
                 <p className={styles.name}>{shortTitle}</p>
             </div>
-
             <p>${product.price}</p>
-
             <input
                 type="number"
                 className={styles.input}
