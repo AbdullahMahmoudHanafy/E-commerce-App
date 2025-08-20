@@ -12,4 +12,10 @@ function addTocart(product) {
     localStorage.setItem('cart', JSON.stringify(wishlist));
 }
 
-export { loadCart, addTocart };
+function removeFromcart(productId) {
+    let wishlist = JSON.parse(localStorage.getItem('cart')) || [];
+    wishlist = wishlist.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(wishlist));
+}
+
+export { loadCart, addTocart, removeFromcart };
