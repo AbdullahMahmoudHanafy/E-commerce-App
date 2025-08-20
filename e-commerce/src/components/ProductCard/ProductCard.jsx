@@ -4,6 +4,7 @@ import { faHeart, faEye } from '@fortawesome/free-regular-svg-icons';
 import { faStar as solidStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import { addTocart } from '../../services';
 
 function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToWishlist = () => {}}) {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ function ProductCard({product, wishListed = false, onRemove = () => {}, onAddToW
         <div className={styles.mainContainer}>
             <div className={styles.card}>
                 <img src={product.image} alt="Product" className={styles.image}  onClick={handleProductClick}/>
-                <div className={styles.addToCart}>Add to Cart</div>
+                <div className={styles.addToCart} onClick={() => addTocart(product)}>Add to Cart</div>
                 {!wishListed && (
                     <>
                         <button className={styles.button}>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as solidStar, faStarHalfAlt, faHeart, faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import { faStar as regularStar, faTruck } from '@fortawesome/free-regular-svg-icons';
 import {ProductList} from '../../components';
-import { saveToWishlist, getProduct, getAllProducts } from '../../services';
+import { saveToWishlist, getProduct, getAllProducts, addTocart } from '../../services';
 
 function ProductDetails() {
     const [selectedColor, setSelectedColor] = useState("blue");
@@ -116,7 +116,7 @@ function ProductDetails() {
                                     +
                                 </button>
                             </div>
-                            <button className={styles.buyButton}>Buy Now</button>
+                            <button className={styles.buyButton} onClick={() => addTocart(product)}>Buy Now</button>
                             <button className={styles.baseButton} onClick={() => saveToWishlist(product)}>
                                 <FontAwesomeIcon icon={faHeart} className={styles.wishlistIcon} />
                             </button>
