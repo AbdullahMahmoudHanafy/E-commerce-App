@@ -4,19 +4,21 @@ function loadCart() {
 
 function addTocart(product, amount = 1) {
     const id = product.id;
-    let wishlist = JSON.parse(localStorage.getItem('cart')) || [];
-    if (wishlist.some(item => item.id === id)) {
-        return; // already in wishlist, do nothing
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.some(item => item.id === id)) {
+        cart = cart.map(item => item.id === id ? { ...item, amount: item.amount + amount } : item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        return;
     }
     product.amount = amount;
-    wishlist.push(product);
-    localStorage.setItem('cart', JSON.stringify(wishlist));
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function removeFromcart(productId) {
-    let wishlist = JSON.parse(localStorage.getItem('cart')) || [];
-    wishlist = wishlist.filter(item => item.id !== productId);
-    localStorage.setItem('cart', JSON.stringify(wishlist));
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 export { loadCart, addTocart, removeFromcart };

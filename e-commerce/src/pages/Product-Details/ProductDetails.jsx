@@ -116,7 +116,7 @@ function ProductDetails() {
                                     +
                                 </button>
                             </div>
-                            <button className={styles.buyButton} onClick={() => addTocart(product)}>Buy Now</button>
+                            <button className={styles.buyButton} onClick={() => addTocart(product, quantity)}>Buy Now</button>
                             <button className={styles.baseButton} onClick={() => saveToWishlist(product)}>
                                 <FontAwesomeIcon icon={faHeart} className={styles.wishlistIcon} />
                             </button>
