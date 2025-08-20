@@ -7,5 +7,6 @@ import Products from "./Products/Products";
 import ProductDetails from "./Product-Details/ProductDetails";
 import Account from "./Account/Account";
 import Cart from "./Cart/Cart";
+import CartCard from "../components/CartCard/CartCard";
 
-export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart };
+export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, CartCard };

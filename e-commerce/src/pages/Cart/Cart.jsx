@@ -1,7 +1,18 @@
 import styles from './Cart.module.css'
+import { useEffect, useState } from 'react';
+import { CartCard } from '../../components';
+import { loadCart } from '../../services';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
-    const cartTitles = ["Product", "Price", "Quantity", "Total"];
+    const [cartItems, setCartItems] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setCartItems(loadCart());
+    }, []);
+
+    const cartTitles = ["Product", "Price", "Quantity", "Subtotal"];
     const cartDetails = {"subtotal": "1750$", "shipping": "Free", "total": "1750$"};
     return (
         <div className={styles.mainContainer}>
@@ -11,12 +22,17 @@ function Cart() {
                     <div className={styles.cartTitles}>
                         {
                             cartTitles.map((title, index) => (
-                                <p key={index} className={styles.blackText}>{title}</p>
+                                <p key={index} className={styles.productColTitle} id={title === "Product" ? styles.productTitle : ""}>{title}</p>
                             ))
                         }
                     </div>
+                    {
+                        cartItems.map((item, index) => (
+                            <CartCard key={index} product={item} onRemove={() => {}}/>
+                        ))
+                    }
                     <div className={styles.cartButtons}>
-                        <button className={styles.cartButton}>Return to shop</button>
+                        <button className={styles.cartButton} onClick={() => navigate("/products")}>Return to shop</button>
                         <button className={styles.cartButton}>Update Cart</button>
                     </div>
                 </div>

@@ -58,6 +58,14 @@
     padding: 0px;
 }
 
+.productColTitle {
+    width: 70px;
+}
+
+#productTitle {
+    width: 200px;
+}
+
 .cartButtons {
     display: flex;
     flex-direction: row;
