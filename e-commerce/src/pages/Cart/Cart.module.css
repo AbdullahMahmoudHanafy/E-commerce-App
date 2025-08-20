@@ -1,0 +1,208 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 50px 10% 50px 10%;
+}
+
+.colDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blackText {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.blackText a {
+    color: grey;
+}
+
+.contentDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.cartTitles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    padding: 0px 20px 0px 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.cartTitles p {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.cartButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartButton {
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0px 40px 0px 40px;
+    width: auto;
+}
+
+.payDiv {
+    display: flex;
+    flex-direction: row;;
+}
+
+.couponDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    color: black;
+    gap: 10px;
+}
+
+.couponDiv input {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    height: 100%;
+    font-size: 16px;
+    min-width: 150px;
+    width: auto;
+}
+
+.couponDiv button {
+    font-size: 18px;
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    margin: 0px;
+    border: 1px solid #DB4444;
+    border-radius: 5px;
+    width: auto;
+    min-width: 179px;
+    padding: 0px 30px 0px 30px;
+}
+
+.checkoutDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    max-width: 800px;
+    padding: 50px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.checkoutTitle {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+.checkoutDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    color: black;
+    padding: 0px;
+}
+
+.checkoutText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    padding: 0px;
+}
+
+.buttonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.redButton {
+    font-size: 18px;
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0px;
+    border: 1px solid #DB4444;
+    border-radius: 5px;
+    width: auto;
+    min-width: 200px;
+    padding: 0px 40px 0px 40px;
+}
+
+@media (max-width: 1200px) {
+    .payDiv {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .couponDiv input {
+        width: 100%;
+    }
+
+    .checkoutDiv {
+        max-width: 100%;
+    }
+}

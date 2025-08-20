@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { NavBar, Footer} from './components'
-import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account } from './pages';
+import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart } from './pages';
 
 function App() {
 
@@ -16,6 +16,7 @@ function App() {
             <Route path='/products' element={<Products/>}/>
             <Route path='/products/:id' element={<ProductDetails/>}/>
             <Route path='/account' element={<Account/>} />
+            <Route path='/cart' element={<Cart/>} />
             <Route path='*' element={<Error404 />} />
         </Routes>
         <Footer />

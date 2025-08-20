@@ -6,5 +6,6 @@ import WishList from "./Wishlist/WishList";
 import Products from "./Products/Products";
 import ProductDetails from "./Product-Details/ProductDetails";
 import Account from "./Account/Account";
+import Cart from "./Cart/Cart";
 
-export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account };
+export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart };
