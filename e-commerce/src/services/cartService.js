@@ -2,6 +2,10 @@ function loadCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
+function updateCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
 function addTocart(product, amount = 1) {
     const id = product.id;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -21,4 +25,4 @@ function removeFromcart(productId) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-export { loadCart, addTocart, removeFromcart };
+export { loadCart, addTocart, removeFromcart, updateCart };

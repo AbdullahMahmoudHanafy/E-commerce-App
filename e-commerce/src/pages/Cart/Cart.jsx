@@ -1,7 +1,7 @@
 import styles from './Cart.module.css';
 import { useEffect, useState } from 'react';
 import { CartCard } from '../../components';
-import { loadCart } from '../../services';
+import { loadCart, updateCart } from '../../services';
 import { useNavigate } from 'react-router-dom';
 
 function Cart() {
@@ -35,8 +35,7 @@ function Cart() {
     const cartTitles = ["Product", "Price", "Quantity", "Subtotal"];
 
     const handleUpdateCart = () => {
-        // Here you can send cartItems to backend or localStorage
-        console.log("Updated cart:", cartItems);
+        updateCart(cartItems);
     };
 
     return (
