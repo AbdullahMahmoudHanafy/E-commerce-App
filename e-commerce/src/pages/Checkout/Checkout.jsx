@@ -2,7 +2,7 @@ import styles from './Checkout.module.css';
 import { useState, useEffect } from "react";
 import { loadCart } from '../../services';
 import { PaymentOptions } from '../../components';
-import { getCurrentUser } from '../../services';
+import { getCurrentUser, clearCart } from '../../services';
 import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
@@ -40,6 +40,7 @@ function Checkout() {
             return alert("Street address is required");
 
         if (currentUser.email === user.email) {
+            clearCart();
             alert("Successfully checked out!");
             navigate('/');
         }else alert("Emails do not match");
