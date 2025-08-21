@@ -1,0 +1,110 @@
+.mainContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.blackText {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.blackText a {
+    color: grey;
+}
+
+.header {
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+.contentDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.personalDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    align-items: start;
+    justify-content: center;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: start;
+    justify-content: center;
+}
+
+.inputHeader {
+    background-color: white;
+    color: grey;
+    font-size: 18px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.redStar {
+    background-color: white;
+    color: red;
+    width: 5px;
+}
+
+.input {
+
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    width: auto;
+    gap: 5px;
+    text-align: center;
+}
+
+.label input {
+    background-color: white;
+    color: #DB4444;
+    width: 20px;
+    height: 20px;
+}

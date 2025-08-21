@@ -41,7 +41,7 @@ function NavBar() {
                             <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} id={styles.searchIcon}/>
                         </div>
                         <FontAwesomeIcon icon={faHeart} className={styles.icon} onClick={() => handleNavigation('/wish-list')}/>
-                        <FontAwesomeIcon icon={faCartShopping} className={styles.icon}/>
+                        <FontAwesomeIcon icon={faCartShopping} className={styles.icon} onClick={() => handleNavigation('/cart')}/>
                         <FontAwesomeIcon icon={faUser} className={styles.icon} onClick={() => handleNavigation('/account')}/>
                     </div>
                 </div>

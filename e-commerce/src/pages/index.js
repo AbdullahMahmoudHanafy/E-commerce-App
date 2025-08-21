@@ -8,5 +8,6 @@ import ProductDetails from "./Product-Details/ProductDetails";
 import Account from "./Account/Account";
 import Cart from "./Cart/Cart";
 import CartCard from "../components/CartCard/CartCard";
+import Checkout from "./Checkout/Checkout";
 
-export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, CartCard };
+export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, CartCard, Checkout };

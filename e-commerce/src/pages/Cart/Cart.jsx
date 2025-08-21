@@ -105,7 +105,7 @@ function Cart() {
                         </div>
 
                         <div className={styles.buttonDiv}>
-                            <button className={styles.redButton}>Proceed to checkout</button>
+                            <button className={styles.redButton} onClick={() => navigate("/checkout")}>Proceed to checkout</button>
                         </div>
                     </div>
                 </div>
