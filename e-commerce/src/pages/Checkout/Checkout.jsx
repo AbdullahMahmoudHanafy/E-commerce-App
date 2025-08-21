@@ -2,8 +2,12 @@ import styles from './Checkout.module.css';
 import { useState, useEffect } from "react";
 import { loadCart } from '../../services';
 import { PaymentOptions } from '../../components';
+import { getCurrentUser } from '../../services';
+import { useNavigate } from 'react-router-dom';
 
 function Checkout() {
+    const navigate = useNavigate();
+    const [user, setUser] = useState({});
     const [cart, setCart] = useState([]);
     const [subtotal, setSubtotal] = useState(0);
     const [paymentMethod, setPaymentMethod] = useState("bank");
@@ -20,7 +24,29 @@ function Checkout() {
         setCart(data);
     }, []);
 
-    const inputHeaders = ['First Name', 'Email Address', 'Phone Number', 'Town/City', 'Street Address', "Appartment, Floor, etc.", "Company"];
+    function handleSubmit(e) {
+        e.preventDefault();
+        const currentUser = getCurrentUser();
+        console.log(user);
+        if(!user.firstName)
+            return alert("First name is required");
+        if (!user.email)
+            return alert("Email is required");
+        if (!user.phoneNumber)
+            return alert("Phone number is required");
+        if (!user.town)
+            return alert("Town is required");
+        if (!user.streetAddress)
+            return alert("Street address is required");
+
+        if (currentUser.email === user.email) {
+            alert("Successfully checked out!");
+            navigate('/');
+        }else alert("Emails do not match");
+    }
+
+    const inputHeaders = ['First Name', 'Email', 'Phone Number', 'Town/City', 'Street Address', "Appartment, Floor, etc.", "Company"];
+    const inputNames = ['firstName', 'email', 'phoneNumber', 'town', 'streetAddress', "appartment", "company"];
     const checkoutDetails = ["Subtotal", "Shipping", "Total"];
     return (
         <div className={styles.mainContainer}>
@@ -35,7 +61,7 @@ function Checkout() {
                             inputHeaders.map((header, index) => (
                                 <div key={index} className={styles.inputDiv}>
                                     <p className={styles.inputHeader}>{header}{index != inputHeaders.length - 1  && index != inputHeaders.length - 2 && <p className={styles.redStar}>*</p>}</p>
-                                    <input type="text" className={styles.input} />
+                                    <input type="text" className={styles.input} value={user[inputNames[index]]} onChange={(e) => setUser({...user, [inputNames[index]]: e.target.value})}/>
                                 </div>
                             ))
                         }
@@ -72,7 +98,7 @@ function Checkout() {
                             <input type="text" placeholder="Coupon Code" />
                             <button>Apply Coupon</button>
                         </div>
-                        <button className={styles.placeOrderButton}>Place Order</button>
+                        <button className={styles.placeOrderButton} onClick={handleSubmit}>Place Order</button>
                     </div>
                 </div>
             </div>
