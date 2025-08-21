@@ -1,0 +1,55 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    color: blacks;
+    text-align: center;
+    gap: 1%;
+}
+
+.label span {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.imagesDiv {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    gap: 10px;
+}
+
+.img {
+    height: 100%;
+    width: auto;
+    max-width: 40px;
+    max-height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.input {
+    background-color: white;
+    color: #DB4444;
+    width: 3%;
+    height: 20px;
+}
