@@ -131,3 +131,28 @@
     height: 50px;
     width: 200px;
 }
+
+@media (max-width: 1300px) {
+    .contentDiv {
+        flex-direction: column;
+    }
+    .infoDiv {
+        width: 100%;
+    }
+    .formDiv {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 850px) {
+    .formDiv {
+        height: 600px;
+    }
+    .personalInfoDiv {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+    }
+}
