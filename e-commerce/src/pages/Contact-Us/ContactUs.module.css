@@ -1,0 +1,133 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 50px 10% 50px 10%;
+}
+
+.colDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blackText {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.blackText a {
+    color: grey;
+}
+
+.contentDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 40px;
+}
+
+.infoDiv p {
+    background-color: white;
+    color: black;
+}
+
+.infoHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.infoTitle {
+    background-color: white;
+    color: black;
+    font-size: 18px;
+}
+
+.iconDiv {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #DB4444;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.icon {
+    background-color: #DB4444;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 40px;
+}
+
+.personalInfoDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.inputField {
+    height: 50px;
+    border-radius: 5px;
+}
+
+.textArea {
+    height: 260px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    padding: 10px;
+}
+
+.submitButton {
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+}

@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { NavBar, Footer} from './components'
-import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, Checkout } from './pages';
+import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, Checkout, ContactUs } from './pages';
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
             <Route path='/account' element={<Account/>} />
             <Route path='/cart' element={<Cart/>} />
             <Route path='/checkout' element={<Checkout/>} />
+            <Route path='/contact-us' element={<ContactUs/>} />
             <Route path='*' element={<Error404 />} />
         </Routes>
         <Footer />
