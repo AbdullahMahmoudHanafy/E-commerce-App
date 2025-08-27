@@ -64,6 +64,63 @@
     max-width: 60%;
 }
 
+.detailsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 50px 0px 50px 0px;
+}
+
+.detailDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.textDetailDiv {
+    background-color: transparent;
+}
+
+.detailDiv:hover, .detailDiv:hover .textDetailDiv h3, .detailDiv:hover .textDetailDiv p {
+    background-color: #DB4444;
+    color: white;
+}
+
+.textDetailDiv p {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.textDetailDiv h3 {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 1300px) {
+    .detailsDiv {
+        flex-wrap: wrap;
+    }
+    
+}
+
 @media (max-width: 900px) {
     .storyDiv {
         flex-direction: column;
