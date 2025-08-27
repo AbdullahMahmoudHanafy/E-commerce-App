@@ -23,7 +23,7 @@ function NavBar() {
                             Home
                         </button>
                         <button className={`${styles.navButton} ${location.pathname === '/contact' ? styles.active : ''}`}
-                            onClick={() => handleNavigation('/contact')}>
+                            onClick={() => handleNavigation('/contact-us')}>
                             Contact
                         </button>
                         <button className={`${styles.navButton} ${location.pathname === '/about' ? styles.active : ''}`}
