@@ -1,6 +1,9 @@
 import styles from './About.module.css';
 import { ServicesList, ServiceIcon } from '../../components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSackDollar, faShop, faDollarSign, faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 
 function About() {
     const details = [{
@@ -23,6 +26,29 @@ function About() {
         Number: '25K',
         title: 'Anual gross sale in our site'
     }]
+    const managers = [{
+        img: '/images/managers/TomCruise.png',
+        name: 'Tom Cruise',
+        title: 'Founder & CEO'
+    },
+    {
+        img: '/images/managers/WillSmith.png',
+        name: 'Will Smith',
+        title: 'Managing Director'
+    },  
+    {
+        img: '/images/managers/EmmaWatson.png',
+        name: 'Emma Watson',
+        title: 'Head of Sales'
+    }]
+    
+    const repeatedManagers = Array.from({ length: 5 }, (_, i) => i % 2 === 0 ? managers : [...managers].reverse()).flat();
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [];
+    for (let i = 0; i < repeatedManagers.length; i += 3) {
+        slides.push(repeatedManagers.slice(i, i + 3));
+    }
     return (
         <div className={styles.mainContainer}>
             <div className={styles.colDiv}>
@@ -49,6 +75,31 @@ function About() {
                             </div>
                         ))
                     }
+                </div>
+                <div className={styles.managersDiv}>
+                    {slides[currentSlide].map((manager, index) => (
+                        <div key={index} className={styles.managerDiv}>
+                        <div className={styles.managerImgDiv}>
+                            <img src={manager.img} alt={manager.name} />
+                        </div>
+                        <p id={styles.managerName}>{manager.name}</p>
+                        <p className={styles.managerTitle}>{manager.title}</p>
+                        <div className={styles.socialDiv}>
+                            <FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} />
+                            <FontAwesomeIcon icon={faLinkedinIn} className={styles.socialIcon} />
+                            <FontAwesomeIcon icon={faInstagram} className={styles.socialIcon} />
+                        </div>
+                        </div>
+                    ))}
+                </div>
+                <div className={styles.dotsDiv}>
+                    {slides.map((_, index) => (
+                        <span
+                        key={index}
+                        className={`${styles.dot} ${index === currentSlide ? styles.activeDot : ""}`}
+                        onClick={() => setCurrentSlide(index)}
+                        />
+                    ))}
                 </div>
                 <ServicesList />
             </div>

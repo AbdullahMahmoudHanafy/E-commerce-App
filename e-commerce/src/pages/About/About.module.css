@@ -114,11 +114,111 @@
     text-align: center;
 }
 
+.managersDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px 20px 0px;
+}
+
+.managerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: start;
+    max-width: 400px;
+}
+
+.managerDiv p {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#managerName {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.managerImgDiv {
+    background-color: #FaFaFa;
+    min-height: 450px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.managerImgDiv img {
+    background-color: #FaFaFa;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.socialDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.socialIcon {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dotsDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.activeDot {
+  background: #DB4444;
+}
+
+@media (max-width: 1600px) {
+    .managersDiv {
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+    .managerDiv {
+        text-align: center;
+    }
+    .socialDiv {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 1300px) {
     .detailsDiv {
         flex-wrap: wrap;
     }
-    
 }
 
 @media (max-width: 900px) {
@@ -136,5 +236,4 @@
         max-width: 100%;
         height: auto;
     }
-    
 }
