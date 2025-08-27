@@ -5,5 +5,6 @@ import ProductList from "./ProductList/ProductList";
 import CartCard from "./CartCard/CartCard";
 import PaymentOptions from "./PaymentOptions/PaymentOptions";
 import ServicesList from "./ServicesList/ServicesList";
+import ServiceIcon from "./ServiceIcon/ServiceIcon";
 
-export {NavBar, Footer, ProductCard, ProductList, CartCard, PaymentOptions, ServicesList};
+export {NavBar, Footer, ProductCard, ProductList, CartCard, PaymentOptions, ServicesList, ServiceIcon};

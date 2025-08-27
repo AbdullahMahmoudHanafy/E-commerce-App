@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { NavBar, Footer} from './components'
-import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, Checkout, ContactUs } from './pages';
+import { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, Checkout, ContactUs, About } from './pages';
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
             <Route path='/cart' element={<Cart/>} />
             <Route path='/checkout' element={<Checkout/>} />
             <Route path='/contact-us' element={<ContactUs/>} />
+            <Route path='/about' element={<About/>} />
             <Route path='*' element={<Error404 />} />
         </Routes>
         <Footer />

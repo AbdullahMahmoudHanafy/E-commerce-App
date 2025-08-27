@@ -1,0 +1,83 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: 50px 10% 50px 10%;
+}
+
+.colDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blackText {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    width: auto;
+}
+
+.blackText a {
+    color: grey;
+}
+
+.storyDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    text-align: left;
+}
+
+.textDiv p {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+
+.storyTitle {
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+.storyDiv img {
+    width: auto;
+    height: auto;
+    max-width: 60%;
+}
+
+@media (max-width: 900px) {
+    .storyDiv {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .textDiv {
+        width: 100%;
+    }
+
+    .storyDiv img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}

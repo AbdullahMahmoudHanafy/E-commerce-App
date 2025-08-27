@@ -10,5 +10,6 @@ import Cart from "./Cart/Cart";
 import CartCard from "../components/CartCard/CartCard";
 import Checkout from "./Checkout/Checkout";
 import ContactUs from "./Contact-Us/ContactUs";
+import About from "./About/About";
 
-export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, CartCard, Checkout, ContactUs };
+export { Error404, SignIn, SignUp, Home, WishList, Products, ProductDetails, Account, Cart, CartCard, Checkout, ContactUs, About };
