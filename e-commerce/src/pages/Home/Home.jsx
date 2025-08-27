@@ -1,7 +1,6 @@
 import styles from './Home.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import { faTruck, faHeadphones, faSquareCheck } from '@fortawesome/free-regular-svg-icons';
 import { ProductCard, ServicesList } from '../../components';
 import { useRef, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
