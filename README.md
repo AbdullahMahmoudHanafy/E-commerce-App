@@ -6,7 +6,7 @@ The project demonstrates a full-featured shopping experience with authentication
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [Demo](#demo)  
 - [Prerequisites](#prerequisites)  
 - [Installation](#installation)  
