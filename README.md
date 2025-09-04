@@ -7,15 +7,15 @@ The project demonstrates a full-featured shopping experience with authentication
 ---
 
 ## 📑 Table of Contents
-1. [Demo Video](#demo-video)  
-2. [Prerequisites](#prerequisites)  
-3. [Installation](#installation)  
-4. [Tech Stack](#tech-stack)  
-5. [Features](#features)  
+- [Demo](#demo)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+- [Tech Stack](#tech-stack)  
+- [Features](#features)  
 
 ---
 
-## 🎥 Demo Video  
+## 🎥 Demo  
 [👉 Watch Demo](#) <!-- Replace # with your demo video link -->  
 
 ---
