@@ -16,7 +16,7 @@ The project demonstrates a full-featured shopping experience with authentication
 ---
 
 ## Demo  
-[👉 Watch Demo](#) <!-- Replace # with your demo video link -->  
+https://github.com/user-attachments/assets/b5e11892-fe6c-4a48-82d9-8595b4d2b71d
 
 ---
 
