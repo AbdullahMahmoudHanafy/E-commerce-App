@@ -48,7 +48,6 @@ Before running the project, ensure you have installed:
 - **Languages:** HTML, CSS, JavaScript  
 - **Routing:** React Router DOM  
 - **Icons:** Font Awesome  
-- **Linting:** ESLint  
 ---
 
 ## Features  
