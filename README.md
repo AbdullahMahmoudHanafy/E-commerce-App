@@ -6,28 +6,28 @@ The project demonstrates a full-featured shopping experience with authentication
 
 ---
 
-## 📑 Table of Contents
-1. [Demo Video](#demo-video)  
-2. [Prerequisites](#prerequisites)  
-3. [Installation](#installation)  
-4. [Tech Stack](#tech-stack)  
-5. [Features](#features)  
+## Table of Contents
+- [Demo](#demo)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+- [Tech Stack](#tech-stack)  
+- [Features](#features)  
 
 ---
 
-## 🎥 Demo Video  
+## Demo  
 [👉 Watch Demo](#) <!-- Replace # with your demo video link -->  
 
 ---
 
-## ⚙️ Prerequisites  
+## Prerequisites  
 Before running the project, ensure you have installed:  
 - [Node.js](https://nodejs.org/) (>= 18)  
 - npm or yarn  
 
 ---
 
-## 🚀 Installation  
+## Installation  
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/exclusive.git
@@ -41,17 +41,16 @@ Before running the project, ensure you have installed:
    npm run dev
 ---
 
-## 🛠 Tech Stack  
+## Tech Stack  
 
 - **Frontend Framework:** React  
 - **Build Tool:** Vite  
 - **Languages:** HTML, CSS, JavaScript  
 - **Routing:** React Router DOM  
 - **Icons:** Font Awesome  
-- **Linting:** ESLint  
 ---
 
-## ✨ Features  
+## Features  
 
 - **User Authentication:**  
 Users can sign up to create an account or sign in if they already have one. Authentication ensures a personalized experience and access to all website functionalities.  
