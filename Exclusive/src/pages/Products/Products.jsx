@@ -3,6 +3,7 @@ import { ProductList } from "../../components";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllProducts } from "../../services";
+import { saveToWishlist } from "../../services";
 
 function Products() {
     const location = useLocation();
@@ -21,7 +22,10 @@ function Products() {
     }, []);
     return (
         <div className={styles.mainContainer}>
-            <ProductList products={products} />
+            <p className={styles.blackText}>
+                <a href="http://localhost:5173/">Home</a> / Contact
+            </p>
+            <ProductList products={products} onAddToWishlist={saveToWishlist} />
         </div>
     )
 }
