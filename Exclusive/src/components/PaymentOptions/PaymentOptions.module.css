@@ -53,3 +53,11 @@
     width: 3%;
     height: 20px;
 }
+
+/* Force consistent checkbox & radio appearance */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #007bff; /* your desired color */
+  background-color: white; /* force background */
+  color-scheme: light; /* prevent dark mode override */
+}

@@ -230,6 +230,7 @@
 
 .quantityDiv input {
     border: 1px solid grey;
+    background-color: white;
     text-align: center;
     width: 40%;
     padding: 0px;
@@ -261,6 +262,15 @@ input::-webkit-outer-spin-button {
 /* For Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* For Chrome, Edge, Safari */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* optional: hides arrows */
+  background: #000; /* background color of arrows */
+  color: white;     /* text color of arrows */
+  border-radius: 2px;
 }
 
 .wishlistIcon {
